@@ -540,6 +540,20 @@
 <!-- إحصائيات الزوار (GoatCounter) — لازم تعملي حساب بنفس الكود ده: kayan-cfw -->
 <script data-goatcounter="https://karas.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a860896b56df5344af1b21e/1k0dp33vk';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
 </head>
 <body>
 
@@ -764,6 +778,12 @@
     </div>
     <div class="footer-bottom">
       <div data-ar="© [السنة] AL DIESEL. كل الحقوق محفوظة" data-en="© [YEAR] AL DIESEL. All rights reserved">© [السنة] AL DIESEL. كل الحقوق محفوظة</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span data-ar="صنع بواسطة AliMoo & Kero Adel" data-en="Made by AliMoo & Kero Adel">صنع بواسطة AliMoo & Kero Adel</span>
+        <button id="copyDiscordBtn" type="button" title="انسخ يوزر الديسكورد" style="background:none;border:1px solid var(--line);color:var(--muted-2);border-radius:6px;padding:3px 9px;font-size:11px;cursor:pointer;">
+          Discord: alimo00_71979
+        </button>
+      </div>
     </div>
   </div>
 </footer>
@@ -992,6 +1012,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.addEventListener('DOMContentLoaded', tryAutoplay);
+})();
+
+/* ==========================================================
+   COPY DISCORD USERNAME
+   ========================================================== */
+(function(){
+  const btn = document.getElementById('copyDiscordBtn');
+  if(!btn) return;
+  const username = 'alimo00_71979';
+  const originalText = btn.textContent;
+  btn.addEventListener('click', () => {
+    navigator.clipboard.writeText(username).then(() => {
+      btn.textContent = 'تم النسخ ✓';
+      setTimeout(() => { btn.textContent = originalText; }, 1500);
+    }).catch(() => {});
+  });
 })();
 </script>
 </body>
